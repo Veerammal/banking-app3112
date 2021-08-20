@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>edituser</title>
+		<link rel="stylesheet" href="{{url_for('static',filename='form.css')}}">
+		<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+	<div class="topnav">
+  <a href="/transferhistory"><i class="fas fa-history"></i>HISTORY</a>
+ <a href="/table"><i class="fas fa-user-friends"></i>CUSTOMERS</a>
+ <a href="/home"><i class="fas fa-home"></i>HOME</a>
+  
+  
+    </div>
+	<h1>Transaction</h1>
+	    <div class="form">
+		<form action="/edituser/{{CUSTOMER}}" method="POST">
+			
+			<label><b>Sender   :</b></label>
+			
+			<input type="text" name="sender" value={{CUSTOMER}}><br>
+			<label><b>Receiver:</b></label>
+			<input type="text" name="receiver" placeholder="receiver name"  required><br>
+			<label><b>Amount   :</b></label>
+			<input type="number" name="amount" placeholder="amount"  required><br>
+			<br>
+			<input type="submit" value='Update Details'>
+		</form>
+		</div>
+	</body>
+</html>

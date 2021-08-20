@@ -1,0 +1,138 @@
+
+<html>
+<head>
+<link rel="arrow-icon" sizes="152x152" href="{{ url_for('static', filename='next-arrow.png') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<style>
+{
+  *box-sizing:border-box;
+}
+.body{
+font -family:Arial;
+}
+.header{
+  grid-area: header;
+  background-color: pink;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+.topnav {
+  overflow: hidden;
+  background-color: orange;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: right;
+  display: block;
+  color:#f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: white;
+  color: blue;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  color:black;
+  font-size:50px;
+}
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: none;
+}
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: pink;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top:0px;
+  margin-left:20px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.footer{
+background-color:silver;
+padding-top:50px;
+padding-bottom:10px;
+text-align:center;
+font-size:20px;
+font-family:absolute;}
+
+</style>
+</head>
+<body>
+  
+  <div class="grid-container">
+  <div class="header">
+    <h2>PK Bank</h2>
+  </div>
+  <div class="topnav">
+  <a href="/transferhistory">Transfer History</a>
+  <a href="/table">Customers</a>
+  <a href="/">Home</a>
+  
+</div>
+<div class="image">
+  <img src="https://thumbs.dreamstime.com/b/online-banking-banner-website-internet-mobile-phone-blue-background-electronic-bank-payment-copy-space-digital-204929150.jpg" width="1330px">
+  <div class="centered">Welcome</div>
+  <img src="next-arrow.png">
+  <div class="button" style="vertical-align:middle"><span>lets go!</span></div>
+ </div>
+ 
+ 
+  
+</div>
+
+</body>
+<div class="footer">Sparks Foundation<BR> By,  Veerammal S</div>
+
+</html>

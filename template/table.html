@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Transaction</title>
+		<link rel="stylesheet" href="{{url_for('static',filename='table2.css')}}">
+		<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+		
+		
+	</head>
+						
+    </head>
+    <body>
+	    <div class="topnav">
+		
+		   
+		  
+		  <a href="/transferhistory"><i class="fas fa-history"></i>HISTORY</a>
+		  <a href="/table"><i class="fas fa-user-friends"></i>CUSTOMERS</a>
+		  <a href="/home"><i class="fas fa-home"></i>HOME</a>
+		  
+		  
+		
+	    </div>
+         
+        <div style="margin-top:100px;margin-bottom:250px;" class="links">
+		
+			 <h3>Transaction</h3>
+			
+			
+			
+			<table border="2">
+				<thead>
+				<tr>
+					<th>SNo</th>
+					<th>Person</th>
+					<th>Mailid</th>
+					<th>CUSTOMER</th>
+					<th>Balance</th>
+					<th>View</th>
+			    </tr>
+				</thead> 
+				<tbody>
+					{% for data in datas %}
+						<tr>
+							<td>{{data.SNo}}</td>
+							<td><img src={{data.Person}} width="20%" height="20%"></td>
+							<td>{{data.Mailid}}</td>
+							<td>{{data.CUSTOMER}}</td>
+							<td>{{data.Balance}}</td>
+							<td><a href="/view/{{data.CUSTOMER}}">View</a></td>
+							
+							
+							
+						</tr>
+					{% endfor %}
+				</tbody> 
+			
+		</div>
+		</table>
+		</form>
+		
+	</body>
+	
+	<div class="footer"><i>Sparks Foundation<i> </div>
+</html>
+
+					
+				
