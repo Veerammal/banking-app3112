@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Transfer History</title>
+		<link rel="stylesheet" href="{{url_for('static',filename='table2.css')}}">
+		<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+		
+     </head>
+    <body>
+	    
+		<div class="topnav">
+		 <a href="/transferhistory"><i class="fas fa-history"></i>HISTORY</a>
+ <a href="/table"><i class="fas fa-user-friends"></i>CUSTOMERS</a>
+ <a href="/home"><i class="fas fa-home"></i>HOME</a>
+		 
+		 
+		  
+		</div>
+		<h3>Transfer History</h3>
+				
+		
+		
+		
+        <table border:"2">
+		    <thead>
+	        <tr>
+	            <th>SNo</th>
+			    <th>Sender</th>
+			    <th>Receiver</th>
+				<th>Amount</th>
+				<th>Date and Time</th>	
+			</tr>
+			</thead>
+			<tbody>
+			{% for data in datas %}
+			    <tr>
+				    <td>{{data.SNo}}</td>
+					<td>{{data.Sender}}</td>
+					<td>{{data.Receiver}}</td>
+					<td>{{data.Amount}}</td>
+					<td>{{data.Date_and_time}}</td>
+					
+					
+					
+					
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+		
+		</form>
+	</body>
+	<div class="footer"><i>Sparks Foundation</i></div>
+</html>
+
+					
+				
